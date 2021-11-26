@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - pwd
       - yum -y update
       - yum -y groupinstall "Development Tools"
       - yum -y install openssl-devel bzip2-devel libffi-devel xz-devel
@@ -18,6 +19,8 @@ phases:
       - mv terraform /bin
   build:
     commands:
+      - ls -l
+      - pwd
       - cd ./dev
       - terraform init 
       - terraform apply -input=false -auto-approve
