@@ -4,18 +4,18 @@ phases:
   install:
     commands:
       - yum -y update
-      - sudo yum -y groupinstall "Development Tools"
-      - sudo yum -y install openssl-devel bzip2-devel libffi-devel xz-devel
-      - sudo yum -y install wget unzip curl
+      - yum -y groupinstall "Development Tools"
+      - yum -y install openssl-devel bzip2-devel libffi-devel xz-devel
+      - yum -y install wget unzip curl
       - wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz
       - tar xvf Python-3.10.0.tgz
       - cd Python-3.10*/
       - ./configure --enable-optimizations
-      - sudo make altinstall
-      - sudo pip install boto3
+      - make altinstall
+      - pip3 install boto3
       - wget https://releases.hashicorp.com/terraform/0.10.4/terraform_0.10.4_linux_amd64.zip
       - unzip terraform_0.10.4_linux_amd64.zip
-      - sudo mv terraform /bin
+      - mv terraform /bin
   build:
     commands:
       - cd dev
