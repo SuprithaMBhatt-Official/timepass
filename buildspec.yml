@@ -19,9 +19,8 @@ phases:
       - mv terraform /bin
   build:
     commands:
-      - ls -l
       - pwd
-      - cd ./dev
+      - cd ../dev
       - terraform init 
       - terraform apply -input=false -auto-approve
 
