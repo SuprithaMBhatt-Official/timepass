@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo yum -y update
+      - yum -y update
       - sudo yum -y groupinstall "Development Tools"
       - sudo yum -y install openssl-devel bzip2-devel libffi-devel xz-devel
       - sudo yum -y install wget unzip curl
