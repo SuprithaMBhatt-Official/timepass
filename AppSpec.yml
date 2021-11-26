@@ -1,16 +1,6 @@
-version: 0.2
-
-phases:
-  build:
-    commands:
-      - cd dev
-      - terraform init 
-      - terraform apply -input=false -auto-approve
-
-  post_build:
-    commands:
-      - echo "Terraform completed on `date`"
-
-artifacts:
-  files:
-    - '**/*'
+version: 0.0
+os: linux
+hooks:
+  ApplicationStart:
+    - location: Scripts/RunTerraformTests.sh
+      timeout: 3600
