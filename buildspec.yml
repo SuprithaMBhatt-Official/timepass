@@ -17,10 +17,16 @@ phases:
       - wget https://releases.hashicorp.com/terraform/1.0.2/terraform_1.0.2_linux_amd64.zip
       - unzip terraform_1.0.2_linux_amd64.zip
       - mv terraform /bin
+      - cd ..
+      - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      - unzip awscliv2.zip
+      - sudo ./aws/install
   build:
     commands:
       - pwd
-      - cd ../dev
+      - aws configure set aws_access_key_id AKIA3KRZMSPE6WA2AAHJ
+      - aws configure set aws_secret_access_key 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
+      - cd ./dev
       - terraform --version
       - terraform init 
       - terraform apply -input=false -auto-approve
