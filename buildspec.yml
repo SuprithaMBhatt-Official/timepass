@@ -21,6 +21,7 @@ phases:
     commands:
       - pwd
       - cd ../dev
+      - terraform --version
       - terraform init 
       - terraform apply -input=false -auto-approve
 
