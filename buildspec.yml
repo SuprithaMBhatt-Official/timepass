@@ -25,7 +25,7 @@ phases:
     commands:
       - pwd
       - aws configure set aws_access_key_id Supritha-at-361256272604
-      - aws configure set aws_secret_access_key e9cLUHdxkTWs1K0kHvbvs3x2LYrHqjJ5A2+y+ZQa53c=
+      - aws configure set aws_secret_access_key vH9KiydydDBccf/CKgnOK6QuibrQ+QgKILBT545uhVM=
       - cd "$dirname"
       - terraform --version
       - terraform init 
