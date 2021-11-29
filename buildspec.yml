@@ -26,7 +26,7 @@ phases:
       - pwd
       - aws configure set aws_access_key_id AKIA3KRZMSPE6WA2AAHJ
       - aws configure set aws_secret_access_key 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
-      - cd "$CODEBUILD_SRC_DIR"
+      - cd "$x"
       - terraform --version
       - terraform init 
       - terraform apply -input=false -auto-approve
