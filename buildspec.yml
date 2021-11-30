@@ -24,8 +24,8 @@ phases:
   build:
     commands:
       - pwd
-      - aws configure set aws_access_key_id AKIAVJM474GWU6YLC23E
-      - aws configure set aws_secret_access_key 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
+      - aws configure set aws_access_key_id AKIA5W52PTEIRZV5Z54G
+      - aws configure set aws_secret_access_key 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
       - cd "$dirname"
       - terraform --version
       - terraform init 
